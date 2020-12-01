@@ -1,0 +1,25 @@
+$gray: #ccc;
+$font-12: 12em;
+
+.parent {
+    .child {
+        color: red;
+        button {
+            width: 100px;
+            height: 200px;
+            background: $gray;
+        }
+        &.bold {
+            font-weight: bold;
+        }
+        &:hover {
+            color: yellow;
+        }
+    }
+}
+
+@for $i from 1 through 12 {
+    .col-#{$i} {
+        width: #{($i / 12) * 100}#{"%"};
+    }
+}
